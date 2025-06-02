@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { Heart, MessageCircle, BookOpen, User, Calendar, Mic } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import AnimatedBackground from './AnimatedBackground';
 import GlowButton from './GlowButton';
 import FeatureCard from './FeatureCard';
@@ -85,12 +86,16 @@ const LandingPage = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <GlowButton>
-              Start Your Journey
-            </GlowButton>
-            <GlowButton variant="secondary">
-              Learn More
-            </GlowButton>
+            <Link to="/dashboard">
+              <GlowButton>
+                Start Your Journey
+              </GlowButton>
+            </Link>
+            <Link to="/chat">
+              <GlowButton variant="secondary">
+                Meet Your AI Family
+              </GlowButton>
+            </Link>
           </motion.div>
         </div>
       </section>
@@ -148,9 +153,11 @@ const LandingPage = () => {
               Join thousands of people who have found comfort, motivation, and joy 
               through their AI family companions.
             </p>
-            <GlowButton>
-              Get Started Today
-            </GlowButton>
+            <Link to="/dashboard">
+              <GlowButton>
+                Get Started Today
+              </GlowButton>
+            </Link>
           </motion.div>
         </div>
       </section>
