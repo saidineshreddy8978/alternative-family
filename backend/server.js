@@ -15,9 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI || 'YOUR_MONGODB_CONNECTION_STRING_HERE', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
+mongoose.connect('mongodb+srv://gangalasaidineshreddy:gangalasaidineshreddy@cluster0.q9ohv.mongodb.net/', {
 });
 
 // User Schema
@@ -78,7 +76,7 @@ const ChatSession = mongoose.model('ChatSession', chatSchema);
 const HabitEntry = mongoose.model('HabitEntry', habitSchema);
 
 // JWT Secret
-const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-here';
+const JWT_SECRET = "sai8978564460";
 
 // Auth middleware
 const authenticateToken = (req, res, next) => {
