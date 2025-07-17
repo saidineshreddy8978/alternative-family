@@ -15,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://gangalasaidineshreddy:gangalasaidineshreddy@cluster0.q9ohv.mongodb.net/', {
+mongoose.connect('"Enter the your url"', {
 });
 
 // User Schema
